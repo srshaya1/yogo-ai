@@ -74,26 +74,26 @@ export const StudentDashboard: React.FC = () => {
                 type="button"
                 onClick={() => setIsProfileModalOpen(true)}
                 className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-bold bg-violet-500/20 text-violet-200 border border-violet-500/40 hover:bg-violet-500/30 transition-colors shadow-xs group cursor-pointer"
-                title="Profili redaktə et"
+                title="Edit Profile"
               >
                 <img
                   src={currentUser.avatar}
                   alt={currentUser.name}
                   className="w-5 h-5 rounded-full object-cover ring-1 ring-violet-400"
                 />
-                <span>Xoş gəldiniz, {currentUser.name}</span>
-                <span className="text-[10px] text-cyan-400 group-hover:underline">Dəyiş</span>
+                <span>Welcome, {currentUser.name}</span>
+                <span className="text-[10px] text-cyan-400 group-hover:underline">Edit</span>
               </button>
               <span className="flex items-center gap-1 text-xs font-bold text-amber-400 bg-amber-950/60 px-3 py-1 rounded-full border border-amber-700/50">
                 <Flame className="w-3.5 h-3.5 fill-current" />
-                {currentUser.streakDays} Günlük Məşq Seriyası
+                {currentUser.streakDays} Day Practice Streak
               </span>
             </div>
             <h1 className="text-2xl sm:text-3xl font-black text-white tracking-tight">
-              Süni İntellekt və Kompüter Görmə ilə Yoqa Təlimi
+              AI & Computer-Vision Yoga Training
             </h1>
             <p className="text-slate-300 text-xs sm:text-sm max-w-xl leading-relaxed font-medium">
-              Real-vaxtlı skelet izləmə bədən oynağı bucaqlarınızı təyin edir, biomexaniki dəqiqliyi hesablayır və bədən duruşunuzu mükəmməlləşdirir.
+              Real-time skeletal tracking calculates joint angles, evaluates biomechanical accuracy, and guides your alignment.
             </p>
           </div>
 
@@ -218,16 +218,16 @@ export const StudentDashboard: React.FC = () => {
                 <div className="w-12 h-12 rounded-2xl bg-slate-900 border border-slate-700 flex items-center justify-center mx-auto text-cyan-400">
                   <Activity className="w-6 h-6" />
                 </div>
-                <h4 className="text-white font-bold text-sm">Hələ ki məşq qeydə alınmayıb</h4>
+                <h4 className="text-white font-bold text-sm">No practice sessions recorded yet</h4>
                 <p className="text-xs text-slate-400 max-w-sm mx-auto">
-                  Kameranızı aktivləşdirərək ilk canlı kompüter görmə yoqa məşqinizi başladın.
+                  Turn on your camera to start your first real-time computer vision yoga session.
                 </p>
                 <button
                   onClick={() => setActiveTab('practice')}
-                  className="px-5 py-2.5 rounded-xl bg-violet-600 hover:bg-violet-500 text-white font-bold text-xs border border-violet-400 shadow-md transition-all inline-flex items-center gap-1.5"
+                  className="px-5 py-2.5 rounded-xl bg-violet-600 hover:bg-violet-500 text-white font-bold text-xs border border-violet-400 shadow-md transition-all inline-flex items-center gap-1.5 cursor-pointer"
                 >
                   <Play className="w-3.5 h-3.5 fill-current" />
-                  <span>İlk Məşqə Başla</span>
+                  <span>Start First Practice</span>
                 </button>
               </div>
             ) : (
@@ -266,10 +266,10 @@ export const StudentDashboard: React.FC = () => {
                           setSelectedPoseId(session.poseId);
                           setActiveTab('practice');
                         }}
-                        className="px-3.5 py-2 rounded-xl bg-violet-600 hover:bg-violet-500 text-white text-xs font-bold border border-violet-400 shadow-md transition-all flex items-center gap-1.5"
+                        className="px-3.5 py-2 rounded-xl bg-violet-600 hover:bg-violet-500 text-white text-xs font-bold border border-violet-400 shadow-md transition-all flex items-center gap-1.5 cursor-pointer"
                       >
                         <Play className="w-3.5 h-3.5 fill-current" />
-                        <span>Məşqə Başla</span>
+                        <span>Start Practice</span>
                       </button>
                     </div>
                   </div>
@@ -302,10 +302,10 @@ export const StudentDashboard: React.FC = () => {
                       setSelectedPoseId(pose.id);
                       setActiveTab('practice');
                     }}
-                    className="mt-3 w-full py-2 rounded-xl bg-cyan-600 hover:bg-cyan-500 text-white font-bold text-xs transition-all flex items-center justify-center gap-1.5 shadow-md border border-cyan-400"
+                    className="mt-3 w-full py-2 rounded-xl bg-cyan-600 hover:bg-cyan-500 text-white font-bold text-xs transition-all flex items-center justify-center gap-1.5 shadow-md border border-cyan-400 cursor-pointer"
                   >
                     <Play className="w-3 h-3 fill-current" />
-                    <span>Başla</span>
+                    <span>Practice</span>
                   </button>
                 </div>
               ))}
@@ -327,7 +327,7 @@ export const StudentDashboard: React.FC = () => {
                 <p className="text-xs">No upcoming private lessons scheduled.</p>
                 <button
                   onClick={() => setActiveTab('instructors')}
-                  className="px-4 py-2 rounded-xl bg-cyan-600 text-white font-bold text-xs"
+                  className="px-4 py-2 rounded-xl bg-cyan-600 text-white font-bold text-xs cursor-pointer"
                 >
                   Browse Certified Instructors
                 </button>
@@ -373,10 +373,10 @@ export const StudentDashboard: React.FC = () => {
                     <span className="font-mono text-slate-200 font-bold">${b.price}</span>
                     <button
                       onClick={() => setActiveTab('bookings')}
-                      className="px-3.5 py-1.5 rounded-xl bg-violet-600 hover:bg-violet-500 text-white font-bold text-xs flex items-center gap-1.5 border border-violet-400 shadow-sm transition-all"
+                      className="px-3.5 py-1.5 rounded-xl bg-violet-600 hover:bg-violet-500 text-white font-bold text-xs flex items-center gap-1.5 border border-violet-400 shadow-sm transition-all cursor-pointer"
                     >
                       <Video className="w-3.5 h-3.5" />
-                      <span>Dərs Otağına Bax</span>
+                      <span>View Lesson Room</span>
                     </button>
                   </div>
                 </div>
@@ -388,17 +388,17 @@ export const StudentDashboard: React.FC = () => {
           <div className="p-5 rounded-2xl bg-gradient-to-br from-indigo-950/80 to-violet-950/60 border border-indigo-700/60 space-y-3 shadow-md">
             <div className="flex items-center gap-2 text-cyan-300 text-xs font-bold">
               <Award className="w-4 h-4 text-cyan-400" />
-              <span>Eğitmen Olmaq İstəyirsiniz?</span>
+              <span>Want to Become a Certified Instructor?</span>
             </div>
             <p className="text-slate-200 text-xs leading-relaxed font-medium">
-              5 hərəkətlik kompüter görmə imtahanını (minimum 85% bal) tamamlayaraq rəsmi təlimçi statusu qazanın və dərslər satın.
+              Complete the 5-pose computer-vision evaluation (≥ 85% passing score) to earn official instructor credentials and teach students.
             </p>
             <button
               onClick={() => setActiveTab('assessment')}
-              className="w-full py-3 rounded-2xl bg-gradient-to-r from-indigo-600 to-violet-600 hover:from-indigo-500 hover:to-violet-500 text-white font-black text-xs tracking-wide border border-indigo-400 shadow-md transition-all flex items-center justify-center gap-2"
+              className="w-full py-3 rounded-2xl bg-gradient-to-r from-indigo-600 to-violet-600 hover:from-indigo-500 hover:to-violet-500 text-white font-black text-xs tracking-wide border border-indigo-400 shadow-md transition-all flex items-center justify-center gap-2 cursor-pointer"
             >
               <Award className="w-4 h-4" />
-              <span>Eğitmen İmtahanına Başla</span>
+              <span>Start Instructor Assessment</span>
             </button>
           </div>
         </div>

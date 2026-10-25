@@ -139,17 +139,17 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenPositioningGuide }) => {
             <button
               onClick={onOpenPositioningGuide}
               className="hidden md:flex items-center gap-1.5 px-3 py-2 text-xs font-bold text-slate-200 bg-slate-800 hover:bg-slate-700 hover:text-cyan-300 border border-slate-600 rounded-xl transition-all shadow-sm"
-              title="Kamera bələdçisi / Camera Setup"
+              title="Camera Positioning & Setup Guide"
             >
               <Video className="w-4 h-4 text-cyan-400" />
-              <span>Kamera Setup</span>
+              <span>Camera Setup</span>
             </button>
 
             {/* Executive Profile & Role Entry Button */}
             <button
               onClick={() => setIsProfileModalOpen(true)}
-              className="flex items-center gap-2.5 px-3 py-1.5 rounded-2xl bg-gradient-to-r from-slate-900 to-slate-800 hover:from-slate-850 hover:to-slate-750 border border-slate-700 hover:border-violet-400/80 text-white transition-all shadow-md hover:shadow-violet-600/20 group"
-              title="Profil idarəetməsi və Eğitmen Girişi"
+              className="flex items-center gap-2.5 px-3 py-1.5 rounded-2xl bg-gradient-to-r from-slate-900 to-slate-800 hover:from-slate-850 hover:to-slate-750 border border-slate-700 hover:border-violet-400/80 text-white transition-all shadow-md hover:shadow-violet-600/20 group cursor-pointer"
+              title="Profile & Account Management"
             >
               <div className="relative">
                 <img
@@ -176,11 +176,11 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenPositioningGuide }) => {
                         : 'bg-violet-600/90 text-white border border-violet-400/50'
                     }`}
                   >
-                    {activeRole === 'instructor' ? 'Eğitmen' : 'Tələbə'}
+                    {activeRole === 'instructor' ? 'Instructor' : 'Student'}
                   </span>
                 </div>
                 <p className="text-[10px] text-cyan-300 group-hover:text-cyan-200 font-semibold flex items-center gap-0.5">
-                  <span>Profil & Giriş</span>
+                  <span>Profile & Account</span>
                   <ChevronRight className="w-3 h-3 text-cyan-400 group-hover:translate-x-0.5 transition-transform" />
                 </p>
               </div>
@@ -241,7 +241,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenPositioningGuide }) => {
                 className="flex-1 flex items-center justify-center gap-2 py-2.5 rounded-xl text-xs font-bold text-white bg-slate-800 hover:bg-slate-700 border border-slate-600"
               >
                 <Video className="w-4 h-4 text-cyan-400" />
-                <span>Kamera Bələdçisi</span>
+                <span>Camera Guide</span>
               </button>
 
               <button
@@ -252,7 +252,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenPositioningGuide }) => {
                 className="flex-1 flex items-center justify-center gap-2 py-2.5 rounded-xl text-xs font-bold text-white bg-gradient-to-r from-violet-600 to-indigo-600 border border-violet-400"
               >
                 <User className="w-4 h-4" />
-                <span>Profil & Eğitmen Girişi</span>
+                <span>Profile & Settings</span>
               </button>
             </div>
           </div>

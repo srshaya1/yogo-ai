@@ -198,10 +198,10 @@ export const InstructorAssessment: React.FC = () => {
             </p>
             <button
               onClick={() => setAssessmentStep('testing')}
-              className="w-full sm:w-auto px-8 py-3.5 rounded-2xl bg-gradient-to-r from-violet-600 via-indigo-600 to-cyan-500 hover:brightness-110 text-white font-black text-sm tracking-wide shadow-xl shadow-violet-600/30 transition-all flex items-center justify-center gap-2 border border-violet-400"
+              className="w-full sm:w-auto px-8 py-3.5 rounded-2xl bg-gradient-to-r from-violet-600 via-indigo-600 to-cyan-500 hover:brightness-110 text-white font-black text-sm tracking-wide shadow-xl shadow-violet-600/30 transition-all flex items-center justify-center gap-2 border border-violet-400 cursor-pointer"
             >
               <Play className="w-4 h-4 fill-current" />
-              <span>Rəsmi İmtahana Başla</span>
+              <span>Begin Official Assessment</span>
             </button>
           </div>
         </div>
@@ -342,19 +342,19 @@ export const InstructorAssessment: React.FC = () => {
         <div className="pt-4 flex flex-col sm:flex-row items-center justify-center gap-4">
           <button
             onClick={handleRetake}
-            className="w-full sm:w-auto px-7 py-3 rounded-2xl bg-slate-800 hover:bg-slate-700 text-white font-bold text-xs transition-all flex items-center justify-center gap-2 border border-slate-600 shadow-sm"
+            className="w-full sm:w-auto px-7 py-3 rounded-2xl bg-slate-800 hover:bg-slate-700 text-white font-bold text-xs transition-all flex items-center justify-center gap-2 border border-slate-600 shadow-sm cursor-pointer"
           >
             <RefreshCw className="w-4 h-4" />
-            <span>İmtahanı Yenidən Ver</span>
+            <span>Retake Assessment</span>
           </button>
 
           {isPassed && (
             <button
               onClick={() => setActiveTab('instructors')}
-              className="w-full sm:w-auto px-7 py-3 rounded-2xl bg-gradient-to-r from-emerald-600 to-teal-500 hover:brightness-110 text-white font-black text-xs tracking-wide shadow-lg shadow-emerald-600/30 transition-all flex items-center justify-center gap-2 border border-emerald-400"
+              className="w-full sm:w-auto px-7 py-3 rounded-2xl bg-gradient-to-r from-emerald-600 to-teal-500 hover:brightness-110 text-white font-black text-xs tracking-wide shadow-lg shadow-emerald-600/30 transition-all flex items-center justify-center gap-2 border border-emerald-400 cursor-pointer"
             >
               <Compass className="w-4 h-4" />
-              <span>Marketplace Profilinə Bax</span>
+              <span>View Marketplace Profile</span>
             </button>
           )}
         </div>

@@ -95,7 +95,7 @@ export const InstructorMarketplace: React.FC = () => {
             className="px-5 py-2.5 rounded-xl bg-violet-600 hover:bg-violet-500 text-white font-black border border-violet-400 text-xs shadow-lg shadow-violet-600/30 transition-all flex items-center gap-2"
           >
             <Award className="w-4 h-4 text-cyan-300" />
-            <span>Eğitmen İmtahanına Get (≥ 85%)</span>
+            <span>Take Instructor Assessment (≥ 85%)</span>
           </button>
         </div>
       </div>
@@ -268,7 +268,7 @@ export const InstructorMarketplace: React.FC = () => {
                 className="px-5 py-2.5 rounded-xl bg-violet-600 hover:bg-violet-500 text-white font-black text-xs tracking-wide shadow-lg shadow-violet-600/30 transition-all flex items-center gap-2 border border-violet-400"
               >
                 <Calendar className="w-3.5 h-3.5" />
-                <span>Dərs Sifariş Et</span>
+                <span>Book Private Lesson</span>
               </button>
             </div>
           </div>

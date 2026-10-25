@@ -204,16 +204,16 @@ export const YogaLibrary: React.FC = () => {
               <div className="grid grid-cols-2 gap-2.5 pt-2">
                 <button
                   onClick={() => setActiveModalPose(pose)}
-                  className="w-full py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-white font-bold text-xs border border-slate-600 transition-all text-center"
+                  className="w-full py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-white font-bold text-xs border border-slate-600 transition-all text-center cursor-pointer"
                 >
-                  Ətraflı Bax
+                  View Details
                 </button>
                 <button
                   onClick={() => handleStartPractice(pose.id)}
-                  className="w-full py-2.5 rounded-xl bg-violet-600 hover:bg-violet-500 text-white font-black text-xs shadow-md shadow-violet-600/30 flex items-center justify-center gap-1.5 transition-all border border-violet-400"
+                  className="w-full py-2.5 rounded-xl bg-violet-600 hover:bg-violet-500 text-white font-black text-xs shadow-md shadow-violet-600/30 flex items-center justify-center gap-1.5 transition-all border border-violet-400 cursor-pointer"
                 >
                   <Play className="w-3.5 h-3.5 fill-current" />
-                  <span>Məşq Et</span>
+                  <span>Practice</span>
                 </button>
               </div>
             </div>

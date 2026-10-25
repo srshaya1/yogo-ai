@@ -93,7 +93,7 @@ export const BookingsView: React.FC = () => {
                 : 'bg-slate-800 text-slate-300 hover:text-white hover:bg-slate-700 border-slate-700'
             }`}
           >
-            {st === 'all' ? 'Bütün Dərslər' : st}
+            {st === 'all' ? 'All Lessons' : st}
           </button>
         ))}
       </div>
@@ -188,17 +188,17 @@ export const BookingsView: React.FC = () => {
                     <>
                       <button
                         onClick={() => updateBookingStatus(b.id, 'confirmed')}
-                        className="px-4 py-2 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold flex items-center gap-1.5 transition-all shadow-md border border-emerald-400"
+                        className="px-4 py-2 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold flex items-center gap-1.5 transition-all shadow-md border border-emerald-400 cursor-pointer"
                       >
                         <Check className="w-4 h-4" />
-                        <span>Təsdiq Et</span>
+                        <span>Confirm</span>
                       </button>
                       <button
                         onClick={() => updateBookingStatus(b.id, 'declined')}
-                        className="px-4 py-2 rounded-xl bg-rose-600 hover:bg-rose-500 text-white font-bold flex items-center gap-1.5 transition-all shadow-md border border-rose-400"
+                        className="px-4 py-2 rounded-xl bg-rose-600 hover:bg-rose-500 text-white font-bold flex items-center gap-1.5 transition-all shadow-md border border-rose-400 cursor-pointer"
                       >
                         <X className="w-4 h-4" />
-                        <span>İmtina Et</span>
+                        <span>Decline</span>
                       </button>
                     </>
                   )}
@@ -207,9 +207,9 @@ export const BookingsView: React.FC = () => {
                   {activeRole === 'student' && b.status === 'pending' && (
                     <button
                       onClick={() => cancelBooking(b.id)}
-                      className="px-4 py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-100 font-bold border border-slate-600 transition-all shadow-sm"
+                      className="px-4 py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-100 font-bold border border-slate-600 transition-all shadow-sm cursor-pointer"
                     >
-                      Sorğunu Ləğv Et
+                      Cancel Request
                     </button>
                   )}
 
@@ -220,7 +220,7 @@ export const BookingsView: React.FC = () => {
                       className="px-5 py-2.5 rounded-xl bg-gradient-to-r from-violet-600 to-cyan-500 hover:brightness-110 text-white font-black flex items-center gap-2 shadow-lg shadow-violet-600/30 transition-all border border-cyan-400"
                     >
                       <Video className="w-4 h-4" />
-                      <span>Dərs Otağına Daxil Ol</span>
+                      <span>Enter Virtual Classroom</span>
                     </button>
                   )}
                 </div>

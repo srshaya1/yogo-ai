@@ -112,7 +112,7 @@ export const CameraPositioningModal: React.FC<CameraPositioningModalProps> = ({
           className="w-full py-3.5 rounded-2xl bg-gradient-to-r from-violet-600 via-indigo-600 to-cyan-500 hover:brightness-110 text-white font-black text-sm tracking-wide shadow-xl shadow-violet-600/30 transition-all flex items-center justify-center gap-2 border border-violet-400"
         >
           <Camera className="w-5 h-5 text-white" />
-          <span>AI Məşqini Başlat</span>
+          <span>Launch AI Practice</span>
         </button>
       </div>
     </div>

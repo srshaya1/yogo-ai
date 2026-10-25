@@ -216,7 +216,7 @@ export const BookingModal: React.FC<BookingModalProps> = ({
             className="w-full py-3.5 rounded-2xl bg-gradient-to-r from-violet-600 via-indigo-600 to-cyan-500 hover:brightness-110 text-white font-black text-sm tracking-wide shadow-xl shadow-violet-600/30 transition-all flex items-center justify-center gap-2 border border-violet-400"
           >
             <CheckCircle2 className="w-5 h-5 text-white" />
-            <span>Dərsi Sifariş Et və Təsdiqlə</span>
+            <span>Confirm & Book Private Lesson</span>
           </button>
         </form>
       </div>
